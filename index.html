@@ -248,10 +248,12 @@ Melhor decisão que tomei!"</p>
                 </h3>
                 <p class="text-lg text-gray-600 mb-8 text-center">
                     **Queremos te mostrar como a Athenas pode trazer clareza, lucro e mais tempo para você. Agende agora uma consulta e personalizada para a sua clínica.**
+                    Mande um email para athenas.newadm@gmail.com
                 </p>
+                
 
                 <!-- Formulário -->
-                <form class="space-y-6">
+                <!--<form class="space-y-6">
                     <div>
                         <label for="nome" class="block text-sm font-medium text-gray-700">Nome Completo:</label>
                         <input type="text" id="nome" name="nome" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#0d47a1] focus:border-[#0d47a1]">
@@ -275,12 +277,12 @@ Melhor decisão que tomei!"</p>
                             <option value="faturamento">Faturamento Clínico (Glosa e Otimização)</option>
                             <option value="treinamento">Treinamento de Equipe em Gestão</option>
                         <!--   <option value="digital">Consultoria Digital (Vídeos, Chatbots, Copy)</option>--> 
-                            <option value="completo">Solução Completa Athenas</option>
+                        <!--   <option value="completo">Solução Completa Athenas</option>
                         </select>
-                    </div>
+                    </div> -->
 
                     <!-- Botão de Envio (CTA) -->
-                    <a href="mailto:easyfature@gmail.com?subject=Agendamento%20de%20Consulta&body=Ol%C3%A1%21%0D%0A%0DEu%20gostaria%20de%20agendar%20uma%20consulta.%0D%0A%0DNome%3A%20%0D%0ATelefone%3A%20%0D%0AHor%C3%A1rio%20desejado%3A%20%0D%0A%0DObrigado%21"
+                    <!--<a href="mailto:easyfature@gmail.com?subject=Agendamento%20de%20Consulta&body=Ol%C3%A1%21%0D%0A%0DEu%20gostaria%20de%20agendar%20uma%20consulta.%0D%0A%0DNome%3A%20%0D%0ATelefone%3A%20%0D%0AHor%C3%A1rio%20desejado%3A%20%0D%0A%0DObrigado%21"
    class="block w-full">
                     <button type="submit" class="cta-button w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-xl font-bold rounded-full shadow-lg text-[#0d47a1] bg-yellow-400 hover:bg-yellow-300 transition duration-300 transform hover:scale-[1.01]">
                         AGENDE SUA CONSULTA!
@@ -288,7 +290,7 @@ Melhor decisão que tomei!"</p>
                     </a>
                     <p id="mensagem-sucesso" class="text-center text-green-600 font-semibold mt-4 hidden">Mensagem enviada com sucesso! Em breve entraremos em contato.</p>
 
-                </form>
+                </form>  -->
             </div>
         </div>
     </section>
@@ -304,32 +306,42 @@ Melhor decisão que tomei!"</p>
             <p>Copyright © 2024 - Agência Athenas</p>
         </div>
     </footer>
+    
 
-    <!-- Script de Simulação de Envio (Para evitar alerts) -->
+
+
+    <!-- Script de Simulação de Envio (Para evitar alerts) --> <!-- 
     <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const successMessage = document.getElementById('mensagem-sucesso');
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-            // Simulação de envio
-            form.querySelectorAll('input, select, button').forEach(el => el.disabled = true);
-            
-            setTimeout(() => {
-                successMessage.classList.remove('hidden');
-                // Em um ambiente real, aqui você enviaria os dados para o servidor.
-                console.log('Dados do formulário simulado:', {
-                    nome: document.getElementById('nome').value,
-                    email: document.getElementById('email').value,
-                    whatsapp: document.getElementById('whatsapp').value,
-                    clinica: document.getElementById('clinica').value,
-                    interesse: document.getElementById('interesse').value,
-                });
-                form.reset();
-                form.querySelectorAll('input, select, button').forEach(el => el.disabled = false);
-            }, 1000);
+    const form = e.target;
+    const successMessage = document.getElementById('mensagem-sucesso');
+
+    const dados = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        whatsapp: document.getElementById('whatsapp').value,
+        clinica: document.getElementById('clinica').value,
+        interesse: document.getElementById('interesse').value,
+        destino: "marcos.rcomercial@gmail.com"
+    };
+
+    form.querySelectorAll('input, select, button').forEach(el => el.disabled = true);
+
+    emailjs.send("SEU_SERVICE_ID", "SEU_TEMPLATE_ID", dados)
+        .then(() => {
+            successMessage.classList.remove('hidden');
+            form.reset();
+            form.querySelectorAll('input, select, button').forEach(el => el.disabled = false);
+        })
+        .catch(err => {
+            console.error("Erro ao enviar:", err);
+            alert("Erro ao enviar o formulário. Tente novamente.");
+            form.querySelectorAll('input, select, button').forEach(el => el.disabled = false);
         });
-    </script>
+});
+</script> -->
+
 </body>
 </html>
