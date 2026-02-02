@@ -215,7 +215,10 @@ Hoje a Athenas é o parceiro completo que a gente sempre sonhou ter."</p>
             </a>
 
             <!-- Ícone 2 -->
-
+            <a href="https://www.klinpsicologia.com.br/" target="_blank" rel="noopener">
+                <img src="img/ee8986_f0f4493f238a4287833c94e16d505af6~mv2.avif" width="120" height="120"
+                    style="width:120px; height:120px; object-fit: contain; border-radius: 12px;" alt="Klin Psicologia">
+            </a>
 
             <!-- Ícone 3 -->
             <a href="https://l.instagram.com/?u=https%3A%2F%2Flumosclinica.com%2Flumosclinica%3Ffbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4CGNhbGxzaXRlAjE1AAGnTG2LBA6FxXB8Un34vIUN-xnRjdx8eEbTntDgn66O69_UKBeYKXBWrvQysaM_aem_GvyGkQ6CXEUzd1A8-aS6XQ&e=AT1DLOpWa9uCcv2-65Ylahmr-6HwmuU5b47-UYZHxeBRZV_4JIUn98mltbWKWCZatZUtm6PAlVeU960mZl0pxXBLsL-7oipbHcLIEbOxHg"
@@ -278,8 +281,9 @@ Melhor decisão que tomei!"</p>
                     uma consulta e personalizada para a sua clínica.**
                 </p>
 
+
                 <!-- Formulário -->
-                <form class="space-y-6">
+                <!--<form class="space-y-6">
                     <div>
                         <label for="nome" class="block text-sm font-medium text-gray-700">Nome Completo:</label>
                         <input type="text" id="nome" name="nome" required
@@ -310,24 +314,24 @@ Melhor decisão que tomei!"</p>
                             <option value="">Selecione uma opção</option>
                             <option value="faturamento">Faturamento Clínico (Glosa e Otimização)</option>
                             <option value="treinamento">Treinamento de Equipe em Gestão</option>
-                            <!--   <option value="digital">Consultoria Digital (Vídeos, Chatbots, Copy)</option>-->
-                            <option value="completo">Solução Completa Athenas</option>
-                        </select>
-                    </div>
+                        <!--   <option value="digital">Consultoria Digital (Vídeos, Chatbots, Copy)</option>-->
+                <option value="completo">Solução Completa Athenas</option>
+                </select>
+            </div> -->
 
-                    <!-- Botão de Envio (CTA) -->
-                    <a href="mailto:easyfature@gmail.com?subject=Agendamento%20de%20Consulta&body=Ol%C3%A1%21%0D%0A%0DEu%20gostaria%20de%20agendar%20uma%20consulta.%0D%0A%0DNome%3A%20%0D%0ATelefone%3A%20%0D%0AHor%C3%A1rio%20desejado%3A%20%0D%0A%0DObrigado%21"
-                        class="block w-full">
-                        <button type="submit"
-                            class="cta-button w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-xl font-bold rounded-full shadow-lg text-[#0d47a1] bg-yellow-400 hover:bg-yellow-300 transition duration-300 transform hover:scale-[1.01]">
-                            AGENDE SUA CONSULTA!
-                        </button>
-                    </a>
-                    <p id="mensagem-sucesso" class="text-center text-green-600 font-semibold mt-4 hidden">Mensagem
-                        enviada com sucesso! Em breve entraremos em contato.</p>
+            <!-- Botão de Envio (CTA) -->
+            <a href="mailto:easyfature@gmail.com?subject=Agendamento%20de%20Consulta&body=Ol%C3%A1%21%0D%0A%0DEu%20gostaria%20de%20agendar%20uma%20consulta.%0D%0A%0DNome%3A%20%0D%0ATelefone%3A%20%0D%0AHor%C3%A1rio%20desejado%3A%20%0D%0A%0DObrigado%21"
+                class="block w-full">
+                <button type="submit"
+                    class="cta-button w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-xl font-bold rounded-full shadow-lg text-[#0d47a1] bg-yellow-400 hover:bg-yellow-300 transition duration-300 transform hover:scale-[1.01]">
+                    AGENDE SUA CONSULTA!
+                </button>
+            </a>
+            <p id="mensagem-sucesso" class="text-center text-green-600 font-semibold mt-4 hidden">Mensagem
+                enviada com sucesso! Em breve entraremos em contato.</p>
 
-                </form>
-            </div>
+            </form> -->
+        </div>
         </div>
     </section>
 
@@ -343,17 +347,20 @@ Melhor decisão que tomei!"</p>
         </div>
     </footer>
 
-    <!-- Script de Simulação de Envio (Para evitar alerts) -->
-    <script>
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
 
+
+
+    <!-- Script de Simulação de Envio (Para evitar alerts) --> <!-- 
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const form = e.target;
             const successMessage = document.getElementById('mensagem-sucesso');
 
             // Simulação de envio
             form.querySelectorAll('input, select, button').forEach(el => el.disabled = true);
-
+            
             setTimeout(() => {
                 successMessage.classList.remove('hidden');
                 // Em um ambiente real, aqui você enviaria os dados para o servidor.
@@ -368,7 +375,9 @@ Melhor decisão que tomei!"</p>
                 form.querySelectorAll('input, select, button').forEach(el => el.disabled = false);
             }, 1000);
         });
-    </script>
+});
+</script> -->
+
 </body>
 
 </html>
